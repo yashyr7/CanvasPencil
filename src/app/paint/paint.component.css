@@ -1,0 +1,30 @@
+.canvas-wrapper {
+  width: 95%;
+  align-items: center;
+}
+
+#canvas {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+}
+
+#brush-color {
+  height: 27px;
+  width: 60px;
+}
+
+.tools button, .tools input {
+  margin: 10px 5px 5px 5px;
+}
+
+#brush-color {
+  vertical-align: middle;
+  border-radius: 5px;
+}

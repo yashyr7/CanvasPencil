@@ -1,0 +1,12 @@
+<div  class="canvas-wrapper">
+  <canvas id="canvas"></canvas>  
+</div>
+
+<div class="tools">
+  <button (click) = "clearCanvas()" class="btn btn-secondary btn-sm">Clear</button>
+  <button id="toggle-eraser" (click) = "eraser()" class="btn btn-secondary btn-sm">Eraser</button>
+  <button id="toggle-drawing-mode" (click) = "toggleDrawingMode()" class="btn btn-secondary btn-sm">Exit Drawing Mode</button>
+  <input type="color" id="brush-color" (blur)="changeColor($event)" value="#00FFFF">
+  <input type="file" accept="image/*" (change) = "uploadImage($event)">
+</div>
+

@@ -1,0 +1,35 @@
+<div *ngIf="auth.user | async" class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="paint-nav-container mb-auto">
+      <div>
+        <h3 class="canvas-nav float-md-start mb-0">Canvas</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="canvas-nav nav-link" (click) = "signOutClicked()">Sign out</a>
+        </nav>
+      </div>
+    </header>
+    <app-paint></app-paint>
+  </div>
+</div>
+<div *ngIf="!(auth.user | async)" class="d-flex h-100 text-center text-white bg-dark">  
+      
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="landing-nav float-md-start mb-0">Canvas</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="landing-nav nav-link" (click) = "signInClicked()">Sign in</a>
+        </nav>
+      </div>
+    </header>
+  
+    <main class="px-3">
+      <h1>Canvas</h1>
+      <p class="lead">Get your creative juices flowing with an easy to use online drawing app.</p>
+      <p class="lead">
+      <a class="google btn" (click) = "signInClicked()"><i class="fa fa-google fa-fw">
+        </i> Login with Google
+      </a>
+      </p>      
+    </main>
+</div>
