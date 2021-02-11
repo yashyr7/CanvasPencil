@@ -20,8 +20,8 @@ export class PaintComponent implements OnInit {
     this.canvas.freeDrawingBrush.width = 5;
     this.brushColor = '#00FFFF'; 
     this.canvas.freeDrawingBrush.color = this.brushColor;
-    this.canvas.setWidth(1505);
-    this.canvas.setHeight(620);
+    this.canvas.setWidth(window.innerWidth * 0.975);
+    this.canvas.setHeight(window.innerHeight * 0.827);
     this.canvas.add(new fabric.Text(" Welcome " + this.name + "!\n Drawing mode enables you to draw anything freely.\n Click Choose File button to upload a picture and edit it.\n You can exit drawing mode to resize and rotate elements.\n Click clear to clean everything on the canvas.\n Happy Drawing!",
     {
       fontSize: 30,
@@ -84,6 +84,7 @@ export class PaintComponent implements OnInit {
       });
     }
     inputImage = null;
+    event.target.files = null;
     event = null;
   }
 

@@ -1,9 +1,10 @@
 .canvas-wrapper {
-  width: 95%;
   align-items: center;
+  text-align:center;
 }
 
 #canvas {
+  display: inline;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
